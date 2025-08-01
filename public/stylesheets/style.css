@@ -1,0 +1,51 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+/* Flip animation container */
+.flip-wrapper {
+  perspective: 1500px;
+  position: relative;
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform .6s ease;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.page.flipped {
+  transform: rotateY(-180deg);
+}
+
+.page-back {
+  transform: rotateY(180deg);
+}
+
+/* Hotspot pulse */
+.hotspot {
+  transition: transform .2s;
+}
+
+.hotspot:hover {
+  transform: scale(1.2);
+}
+
+/* Lightbox */
+.lightbox-bg {
+  background: rgba(0, 0, 0, .8);
+}
